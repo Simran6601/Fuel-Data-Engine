@@ -344,18 +344,6 @@ Features:
 
 ---
 
-# URLS & prompts
-
-http://127.0.0.1:8000/admin/
-http://127.0.0.1:8000/
-http://127.0.0.1:8000/api/fuel-stations/
-http://127.0.0.1:8000/api/station-stats/
-http://127.0.0.1:8000/api/route-planner/?start=Dallas,TX&end=Chicago,IL
-python manage.py test
-cd FuelData-Engine
-venv\Scripts\activate
-python manage.py runserver
-
 # Author
 
 Simran Jamadar
