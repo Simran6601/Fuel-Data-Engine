@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FuelData Engine</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f6f9;
+            margin:0;
+            padding:0;
+        }
+
+        .container{
+            max-width:1100px;
+            margin:auto;
+            padding:40px;
+        }
+
+        .hero{
+            background:white;
+            padding:40px;
+            border-radius:12px;
+            box-shadow:0 2px 10px rgba(0,0,0,.1);
+            text-align:center;
+        }
+
+        .hero h1{
+            color:#2c3e50;
+            margin-bottom:10px;
+        }
+
+        .hero h3{
+            color:#555;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            margin-top:20px;
+            box-shadow:0 2px 8px rgba(0,0,0,.08);
+        }
+
+        .btn{
+            display:inline-block;
+            margin:10px;
+            padding:12px 18px;
+            background:#0077cc;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            font-weight:bold;
+        }
+
+        .btn:hover{
+            background:#005fa3;
+        }
+
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:15px;
+            margin-top:20px;
+        }
+
+        .stat{
+            background:white;
+            padding:20px;
+            text-align:center;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,.08);
+        }
+
+        .stat h2{
+            margin:0;
+            color:#0077cc;
+        }
+
+        pre{
+            background:#f7f7f7;
+            padding:15px;
+            border-radius:8px;
+            overflow-x:auto;
+        }
+
+        ul{
+            line-height:1.8;
+        }
+
+        .footer{
+            text-align:center;
+            margin-top:30px;
+            color:#666;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="hero">
+
+        <h1>⛽ FuelData Engine</h1>
+
+        <h3>
+            Fleet Route Optimization & Fuel Cost Planning Platform
+        </h3>
+
+        <p>
+            Built with Django, OSRM Routing, and Fuel Station Analytics
+        </p>
+
+        <a class="btn" href="/api/docs/">
+            📘 API Documentation
+        </a>
+
+        <a class="btn" href="/admin/">
+            ⚙️ Administration
+        </a>
+
+        <a class="btn"
+           href="/api/route-planner/?start=Dallas,TX&end=Chicago,IL">
+            🚛 Live Route Demo
+        </a>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h2>{{ total_stations }}</h2>
+            <p>Fuel Stations</p>
+        </div>
+
+        <div class="stat">
+            <h2>{{ total_states }}</h2>
+            <p>States Covered</p>
+        </div>
+
+        <div class="stat">
+            <h2>${{ avg_price }}</h2>
+            <p>Average Fuel Price</p>
+        </div>
+
+        <div class="stat">
+            <h2>OSRM</h2>
+            <p>Routing Engine</p>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Project Features</h2>
+
+        <ul>
+            <li>Route optimization using OSRM</li>
+            <li>Fuel stop recommendations</li>
+            <li>Fuel cost estimation</li>
+            <li>500-mile vehicle range support</li>
+            <li>10 MPG fuel efficiency calculations</li>
+            <li>State fuel analytics</li>
+            <li>Fuel station search & filtering</li>
+            <li>Swagger/OpenAPI documentation</li>
+            <li>Django Administration Dashboard</li>
+        </ul>
+
+    </div>
+
+    <div class="card">
+
+        <h2>System Architecture</h2>
+
+<pre>
+User Request
+      ↓
+Route Planner API
+      ↓
+OSRM Routing Engine
+      ↓
+Fuel Station Dataset
+      ↓
+Fuel Optimization Logic
+      ↓
+Cost Estimation Engine
+      ↓
+JSON Response
+</pre>
+
+    </div>
+
+    <div class="card">
+
+        <h2>API Examples</h2>
+
+        <p>
+            <b>Route Planner</b><br>
+            /api/route-planner/?start=Dallas,TX&end=Chicago,IL
+        </p>
+
+        <p>
+            <b>Cheapest States</b><br>
+            /api/cheapest-states/
+        </p>
+
+        <p>
+            <b>Most Expensive States</b><br>
+            /api/most-expensive-states/
+        </p>
+
+        <p>
+            <b>Fuel Cost Calculator</b><br>
+            /api/route-cost/
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Assignment Assumptions</h2>
+
+        <ul>
+            <li>Vehicle fuel efficiency: 10 MPG</li>
+            <li>Maximum vehicle range: 500 miles</li>
+            <li>Routing powered by OSRM</li>
+            <li>Fuel prices sourced from provided dataset</li>
+            <li>Optimal stations selected based on route proximity and fuel cost</li>
+        </ul>
+
+    </div>
+
+    <div class="footer">
+
+        <p>
+            FuelData Engine • Django Backend Assignment • Version 1.0
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
